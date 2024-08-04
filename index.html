@@ -56,6 +56,11 @@
           alert('Please fill out all fields');
           return;
         }
+        localStorage.setItem('name', userName);
+        localStorage.setItem('email', email);
+        localStorage.setItem('mobile', mobile);
+        localStorage.setItem('dob', dob);
+        localStorage.setItem('gender', gender);
     }
 </script>
 </html>
