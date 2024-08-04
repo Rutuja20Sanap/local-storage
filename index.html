@@ -83,5 +83,16 @@
         localStorage.removeItem('gender');
         window.location.reload();
       }
+      const userName = localStorage.getItem('name');
+      if (userName) {
+        greetingElement.innerText = `Hello ${userName}`;
+        hideElements();
+      } else {
+       
+          const logoutButton = document.getElementById('logout');
+          logoutButton.style.display = 'none';
+          const greetingElement= document.getElementById('greeting');
+          greetingElement.style.display = 'none';
+      }
 </script>
 </html>
