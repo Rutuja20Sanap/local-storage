@@ -61,9 +61,19 @@
         localStorage.setItem('mobile', mobile);
         localStorage.setItem('dob', dob);
         localStorage.setItem('gender', gender);
-        
+
         greetingElement.innerText = `Hello ${userName}`;
         hideElements();
     }
+    
+    function hideElements(){
+        const formContainer = document.getElementById('form-container');
+        formContainer.style.display = 'none';
+        const logoutButton = document.getElementById('logout');
+        logoutButton.style.display = 'block';
+        const greetingElement= document.getElementById('greeting');
+        greetingElement.style.display = 'block';
+  
+      }
 </script>
 </html>
