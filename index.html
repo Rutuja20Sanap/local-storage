@@ -37,5 +37,25 @@
       const formContainer = document.getElementById('form-container');
       const logoutButton = document.getElementById('logout');
     const btnElement = document.getElementById('save');
+
+    function save(){
+        const userName = nameElement.value;
+        const email = emailElement.value;
+        const mobile = mobileElement.value;
+        const dob = dobElement.value;
+        let gender = '';
+        
+        for (let i = 0; i < genderElements.length; i++) {
+          if (genderElements[i].checked) {
+            gender = genderElements[i].value;
+            break;
+          }
+        }
+  
+        if (!userName || !email || !mobile || !dob || !gender) {
+          alert('Please fill out all fields');
+          return;
+        }
+    }
 </script>
 </html>
