@@ -75,5 +75,13 @@
         greetingElement.style.display = 'block';
   
       }
+      function logout(){
+        localStorage.removeItem('name');
+        localStorage.removeItem('email');
+        localStorage.removeItem('mobile');
+        localStorage.removeItem('dob');
+        localStorage.removeItem('gender');
+        window.location.reload();
+      }
 </script>
 </html>
